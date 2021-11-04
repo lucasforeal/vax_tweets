@@ -1,0 +1,55 @@
+---
+title: "Lab 10"
+subtitle: "Global Vaccine Twitter Data Challenge"
+output: html_notebook
+---
+
+## Introduction
+
+The "vax_tweets.csv" dataset includes over 200,000 tweets randomly sampled from Twitter from December 12th, 2020 (when COVID-19 vaccines began to be administered in the US) until last week, October 24th, 2021. The tweets were collected from users all around the world and each contained at least one hashtag related to a COVID-19 vaccine (e.g., #PfizerBioNTech, #AstraZenica, #SputnikV, #Moderna, #CovidVaccines, etc.).
+
+## Rules & Guidelines
+
+1. You will work in groups of three to answer the challenge question outlined below. Prof. Mason will announce the groups at the beginning of lab.
+2. You can spend as much time on this challenge as your group agrees to, but you must work for a minimum of 6 hours on it (1.5 hours in lab, and 4.5 hours between today and next class).
+3. You should make sure that all group members are contributing to the challenge equally.
+4. Try to complete this challenge using as many of the tools we've learned this semester as possible (dplyr, ggplot, GIS, regular expressions, stringr, lubridate, etc.).
+6. You must produce a final report using RMarkdown that includes all code (annotated so that Prof. Mason can understand what the heck is going on), visualizations, and a written response to the challenge question based on your analysis of the data. Your report should also include any assumptions you made, and should identify the shortcomings of your analysis (or shortcomings of the data itself).
+7. Each team will also (very briefly) present their solution to the challenge at the beginning of class on Tuesday (November 9th).
+8. Prof. Mason is an available and willing resource if your group is stuck!
+
+## Challenge Question
+
+### Main Question ###
+Since the vaccine started being administered in the United States, how has the discussion surrounding vaccines (as indexed by tweets) changed over time both domestically (within the US) and globally (outside of the US)?
+
+#//E.g. how many tweets, wherefrom*, what about the tweets, etc. Also shortcomings of the analysis/dataset. Min of 6h (including today) put into this until next Tuesday. You can limit a bit of the spatial aspects or something./.
+
+```{r imports and df declaration}
+library(tidyverse)
+library(textdata)
+library(tidytext)
+
+(df <- read.csv("vax_tweets.csv"))
+```
+## Sentiment stuff ##
+```{r}
+get_sentiments("afinn")
+```
+## Location stuff ##
+```{r}
+
+```
+
+### Interesting Heap ###
+```{r}
+unique(group_by(df, id, user_name)) # id is probably for tweet id
+```
+
+## Brainstorming Questions ##
+
+We can use country 
+We're starting with America vs the world
+Whether they're safe or not, should be mandated or not? What are the long-term effect for them?
+
+Reports due Tuesday. 2-page reports
