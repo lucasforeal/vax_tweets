@@ -1,0 +1,9 @@
+## Git general navigational notes and commands ##
+# git's SSH uses port 22 (and Gordon's network malfunction only allows port 80 [and I believe 443] to work), therefore git commands must be called outside of the campus network, e.g. through a hotspot. Here are some of the basic commands we'll be using
+
+git checkout -b <branch>	# create branch
+git checkout <branch>		# switches branches
+git <rollback or something...>	# rollback changes
+git revert <branch_num>		# revert pushed changes
+
+.gitignore 			# list files to ignore changes from, whenever merging
