@@ -38,7 +38,10 @@ get_sentiments("afinn")
 ```
 ## Location stuff ##
 ```{r}
-
+l_1 = c("A", "A", "A", "A", "C", "C", "C", "D", "F", "G", "H", "I", "I", "I", "I", "K", "K", "L", "M", "M", "M", "M", "M", "M", "M", "M", "N", "N", "N", "N", "N", "N", "N", "N", "O", "O", "O", "P", "R", "S", "S", "T", "T", "U", "V", "V", "W", "W", "W", "W")
+l_2 = c("L", "K", "Z", "R", "A", "O", "T", "E", "L", "A", "I", "D", "L", "N", "A", "S", "Y", "A", "E", "D", "A", "I", "N", "S", "O", "T", "E", "V", "H", "J", "M", "Y", "C", "D", "H", "K", "R", "A", "I", "C", "D", "N", "X", "T", "T", "A", "A", "V", "I", "Y")
+regex <- paste0("(?i)((", l_1, "(|\\.))(", l_2, "(|\\.)))")
+str_view_all(df$user_location, regex, match = T)
 ```
 
 ### Interesting Heap ###
